@@ -2,5 +2,9 @@ pipeline:
   stages:
     - steps:
         - run:
-            script: "pwd\\r\r\necho \"Hello DevOps World\""
+            script: "pwd\\r\r
+
+              echo \"Hello DevOps World\"\r
+
+              ls -la"
             shell: bash
