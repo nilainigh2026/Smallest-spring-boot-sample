@@ -2,5 +2,5 @@ pipeline:
   stages:
     - steps:
         - run:
-            script: "pwd\r\necho \"Hello DevOps World\""
+            script: "pwd\\r\r\necho \"Hello DevOps World\""
             shell: bash
