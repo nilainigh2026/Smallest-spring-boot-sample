@@ -2,9 +2,13 @@ pipeline:
   stages:
     - steps:
         - run:
-            script: "pwd\\r\r
+            script: "FROM eclipse-temurin:11-jre as runtime\r
 
-              echo \"Hello DevOps World\"\r
+              WORKDIR /app\r
 
-              ls -la"
-            shell: bash
+              COPY target/smallest-spring-app-1.0.0.jar app.jar\r
+
+              ENTRYPOINT [\"java\",\"-jar\",\"app.jar\"]"
+            shell: sh
+          name: Demo_Harness_Pipeline
+          id: Demo_Harness_Pipeline
